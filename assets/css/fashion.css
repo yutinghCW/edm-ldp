@@ -1,0 +1,132 @@
+body {
+  background-color: #D1B158;
+}
+
+section.opening {
+  position: relative;
+  height: 85vh;
+}
+section.opening::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #171717;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=25);
+  opacity: 0.25;
+  z-index: 1;
+}
+section.opening > .container {
+  position: relative;
+  height: 100%;
+  z-index: 1;
+}
+section.opening > .container > .row {
+  height: 100%;
+  padding-top: 100px;
+  padding-bottom: 200px;
+  align-items: center;
+}
+section.opening > .container > .row h1, section.opening > .container > .row h2 {
+  text-shadow: 0 0 1em #171717;
+}
+section.opening > .container > .row h2 {
+  padding-left: 0.4em;
+  letter-spacing: 0.4em;
+}
+section.content {
+  position: relative;
+  margin-top: -100px;
+  z-index: 1;
+}
+@media screen and (min-width: 1200px) {
+  section.content .container {
+    background-color: #fff;
+  }
+}
+
+.slider-fade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.slider-fade .slick-list, .slider-fade .slick-track {
+  height: 100%;
+}
+.slider-fade .slick-slide img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.feature-group .feature-item {
+  position: relative;
+}
+.feature-group .feature-item .feature-body {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.feature-group .feature-item .feature-body > img {
+  width: 50%;
+}
+
+form label,
+form input[type*='text'],
+form input[type*='email'],
+form input[type*='tel'],
+form select {
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+}
+form button {
+  padding: 10px 50px;
+  color: #171717;
+  font-size: 1rem;
+  background-color: #fff;
+  border: 1px solid #D1B158;
+}
+form button:hover {
+  background-color: #D1B158;
+}
+form .form__group .form__group__input:focus {
+  border-color: #cba844;
+}
+form .select__group.select__group--outlined select {
+  background-color: #fff;
+  background-image: url(../images/common/down.svg);
+  border-color: #939EA7;
+}
+form .select__group.select__group--outlined select:hover {
+  color: #cba844;
+  background-image: url(../images/common/down--fashion.svg);
+}
+form .label--check span.label__radio__mark::before {
+  background: rgba(209, 177, 88, 0.25);
+}
+form .label--check input:checked ~ span.label__radio__mark {
+  border-color: #cba844;
+  background-color: #cba844;
+}
+form .label--check:hover input ~ span.label__radio__mark {
+  border-color: #D1B158;
+}
+form .label--check:hover input:checked ~ span.label__radio__mark {
+  border-color: #cba844;
+}
+
+/*# sourceMappingURL=fashion.css.map */

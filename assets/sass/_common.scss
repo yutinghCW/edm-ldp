@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&family=Noto+Serif+TC:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Roboto&display=swap');
+
+:root {
+    --gray-100: $gray-100;
+    --gray-200: $gray-200;
+    --gray-300: $gray-300;
+    --gray-400: $gray-400;
+    --gray-500: $gray-500;
+    --red-100: $red-100;
+    --red-200: $red-200;
+    --red-300: $red-300;
+    --red-400: $red-400;
+    --red-500: $red-500;
+    --surface: $surface;
+    --primary: $primary;
+    --primary-variant: $primary-variant;
+    --secondary: $secondary;
+    --secondary-variant: $secondary-variant;
+    --facebook: $facebook;
+    --instagram: $instagram;
+    --line: $line;
+	--rss: $rss;
+}
+
+body {
+	position: relative;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	line-height: 1.5;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeSpeed;
+	@media screen and (min-width: 1024px) {
+		font-family: "Roboto", "Noto Sans TC", Arial, "微軟正黑體", "繁黑體", "Microsoft JhengHei", "Microsoft YaHei", "Heiti TC", "LiHei Pro", "新細明體", "PMingLiU", sans-serif;
+	}
+	&.opened {
+		overflow: hidden;
+	}
+}
+
+.serif {
+	font-family: 'Playfair Display', 'Noto Serif TC', serif;
+}
+
+* {
+	@include box-sizing(border-box);
+	outline: 0;
+	&::before,
+	&::after {
+		@include box-sizing(border-box);
+		outline: 0;
+	}
+}
+
+a, button {
+	text-decoration: none;
+	@include breakpoint(1024px) {
+		@include transition(color 0.3s, background 0.3s, border 0.3s);
+	}
+}
+
+img {
+	display: block;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: inherit;
+}
+
+.sr-only {
+	position: absolute !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	width: 0 !important;
+	height: 0 !important;
+	font-size: 0 !important;
+}

@@ -1,0 +1,122 @@
+@import "_mixin";
+@import "_variable";
+
+body {
+    background-color: $transformers;
+}
+
+section {
+    &.opening {
+        position: relative;
+        height: 85vh;
+        background-image: url('../images/transformers/opening.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        @include background-size(cover);
+        &::before {
+            @include beforeafter('', block);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('../images/transformers/dot.png');
+        }
+        > .container {
+            position: relative;
+            height: 100%;
+            z-index: 1;
+            > .row {
+                height: 100%;
+                padding-top: 100px;
+                padding-bottom: 200px;
+                align-items: center;
+                h1, h2 {
+                    background-color: rgba($black, 0.85);
+                    // text-shadow: 0 0 0.5em rgba($black, 0.5);
+                    &::before {
+                        @include beforeafter('', block);
+                        height: 0.075em;
+                    }
+                }
+            }
+        }
+    }
+    &.content {
+        position: relative;
+        margin-top: -100px;
+        z-index: 1;
+        .container {
+            @media screen and (min-width: 1200px) {
+                background-color: $white;
+            }
+        }
+    }
+}
+
+.feature-group {
+    .feature-item {
+        background-color: $transformers;
+        img {
+            width: 50%;
+        }
+    }
+}
+
+form {
+    label,
+    input[type*='text'],
+    input[type*='email'],
+    input[type*='tel'],
+    select {
+        display: block;
+        width: 100%;
+        font-size: 1rem;
+    }
+    button {
+        padding: 10px 50px;
+        color: $white;
+        font-size: 1rem;
+        background-color: $transformers;
+        &:hover {
+            background-color: $transformers-variant;
+        }
+    }
+    .form__group {
+        .form__group__input {
+            &:focus {
+                border-color: $transformers-variant;
+            }
+        }
+    }
+    .select__group {
+        &.select__group--outlined {
+            select {
+                background-color: $white;
+                background-image: url(../images/common/down.svg);
+                border-color: $secondary;
+                &:hover {
+                    color: $transformers-variant;
+                    background-image: url(../images/common/down--transformers.svg);
+                }
+            }
+        }
+    }
+    .label--check {
+        span.label__radio__mark::before {
+            background: rgba($transformers, 0.25);
+        }
+        input:checked ~ span.label__radio__mark {
+            border-color: $transformers-variant;
+            background-color: $transformers-variant;
+        }
+        &:hover {
+            input ~ span.label__radio__mark {
+                border-color: $transformers;
+            }
+            input:checked ~ span.label__radio__mark {
+                border-color: $transformers-variant;
+            }
+        }
+    }    
+}

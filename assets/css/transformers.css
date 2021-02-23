@@ -1,0 +1,107 @@
+body {
+  background-color: #D7B788;
+}
+
+section.opening {
+  position: relative;
+  height: 85vh;
+  background-image: url("../images/transformers/opening.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+section.opening::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/transformers/dot.png");
+}
+section.opening > .container {
+  position: relative;
+  height: 100%;
+  z-index: 1;
+}
+section.opening > .container > .row {
+  height: 100%;
+  padding-top: 100px;
+  padding-bottom: 200px;
+  align-items: center;
+}
+section.opening > .container > .row h1, section.opening > .container > .row h2 {
+  background-color: rgba(23, 23, 23, 0.85);
+}
+section.opening > .container > .row h1::before, section.opening > .container > .row h2::before {
+  content: "";
+  display: block;
+  height: 0.075em;
+}
+section.content {
+  position: relative;
+  margin-top: -100px;
+  z-index: 1;
+}
+@media screen and (min-width: 1200px) {
+  section.content .container {
+    background-color: #fff;
+  }
+}
+
+.feature-group .feature-item {
+  background-color: #D7B788;
+}
+.feature-group .feature-item img {
+  width: 50%;
+}
+
+form label,
+form input[type*='text'],
+form input[type*='email'],
+form input[type*='tel'],
+form select {
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+}
+form button {
+  padding: 10px 50px;
+  color: #fff;
+  font-size: 1rem;
+  background-color: #D7B788;
+}
+form button:hover {
+  background-color: #895A36;
+}
+form .form__group .form__group__input:focus {
+  border-color: #895A36;
+}
+form .select__group.select__group--outlined select {
+  background-color: #fff;
+  background-image: url(../images/common/down.svg);
+  border-color: #939EA7;
+}
+form .select__group.select__group--outlined select:hover {
+  color: #895A36;
+  background-image: url(../images/common/down--transformers.svg);
+}
+form .label--check span.label__radio__mark::before {
+  background: rgba(215, 183, 136, 0.25);
+}
+form .label--check input:checked ~ span.label__radio__mark {
+  border-color: #895A36;
+  background-color: #895A36;
+}
+form .label--check:hover input ~ span.label__radio__mark {
+  border-color: #D7B788;
+}
+form .label--check:hover input:checked ~ span.label__radio__mark {
+  border-color: #895A36;
+}
+
+/*# sourceMappingURL=transformers.css.map */

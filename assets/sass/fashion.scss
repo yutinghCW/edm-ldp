@@ -1,0 +1,150 @@
+@import "_mixin";
+@import "_variable";
+
+body {
+    background-color: $fashion;
+}
+
+section {
+    &.opening {
+        position: relative;
+        height: 85vh;
+        &::before {
+            @include beforeafter('', block);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $black;
+            @include opacity(.25);
+            z-index: 1;
+        }
+        > .container {
+            position: relative;
+            height: 100%;
+            z-index: 1;
+            > .row {
+                height: 100%;
+                padding-top: 100px;
+                padding-bottom: 200px;
+                align-items: center;
+                h1, h2 {
+                    // background-color: rgba($black, 0.85);
+                    // text-shadow: 0 0 0.5em rgba($black, 0.5);
+                    text-shadow: 0 0 1em $black;
+                }
+                h2 {
+                    padding-left: 0.4em;
+                    letter-spacing: 0.4em;
+                }
+            }
+        }
+    }
+    &.content {
+        position: relative;
+        margin-top: -100px;
+        z-index: 1;
+        .container {
+            @media screen and (min-width: 1200px) {
+                background-color: $white;
+            }
+        }
+    }
+}
+
+.slider-fade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    .slick-list, .slick-track {
+        height: 100%;
+    }
+    .slick-slide {
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.feature-group {
+    .feature-item {
+        position: relative;
+        .feature-body {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            @include translateY(-50%);
+            > img {
+                width: 50%;
+            }
+        }
+    }
+}
+
+form {
+    label,
+    input[type*='text'],
+    input[type*='email'],
+    input[type*='tel'],
+    select {
+        display: block;
+        width: 100%;
+        font-size: 1rem;
+    }
+    button {
+        padding: 10px 50px;
+        color: $black;
+        font-size: 1rem;
+        background-color: $white;
+        border: 1px solid $fashion;
+        &:hover {
+            background-color: $fashion;
+        }
+    }
+    .form__group {
+        .form__group__input {
+            &:focus {
+                border-color: $fashion-variant;
+            }
+        }
+    }
+    .select__group {
+        &.select__group--outlined {
+            select {
+                background-color: $white;
+                background-image: url(../images/common/down.svg);
+                border-color: $secondary;
+                &:hover {
+                    color: $fashion-variant;
+                    background-image: url(../images/common/down--fashion.svg);
+                }
+            }
+        }
+    }
+    .label--check {
+        span.label__radio__mark::before {
+            background: rgba($fashion, 0.25);
+        }
+        input:checked ~ span.label__radio__mark {
+            border-color: $fashion-variant;
+            background-color: $fashion-variant;
+        }
+        &:hover {
+            input ~ span.label__radio__mark {
+                border-color: $fashion;
+            }
+            input:checked ~ span.label__radio__mark {
+                border-color: $fashion-variant;
+            }
+        }
+    }    
+}

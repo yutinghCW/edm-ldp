@@ -1,0 +1,10 @@
+button,
+a {
+    background-color: transparent;
+    border: 0;
+    @include border-radius(0);
+    @include appearance(none);
+    &:focus {
+        outline: 0;
+    }
+}

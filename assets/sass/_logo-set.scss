@@ -1,0 +1,48 @@
+.logo__set {
+	display: flex;
+	align-items: center;
+	>a {
+		display: block;
+		align-self: auto;
+		>img {
+			display: block;
+			width: auto;
+			height: auto;
+		}
+		&:first-child {
+			margin-right: 10px;
+		}
+	}
+	&.logo__set--transformers {
+		>a {
+			&:first-child >img {
+				@media screen and (min-width: 768px) {
+					width: 130px;
+				}
+				@media screen and (max-width: 767px) {
+					height: 30px;
+				}
+			}
+			&:last-child >img {
+				@media screen and (min-width: 768px) {
+					width: 125px;
+				}
+				@media screen and (max-width: 767px) {
+					height: 25px;
+				}
+			}
+		}
+	}
+	&.logo__set--fashion {
+		>a {
+			>img {
+				@media screen and (min-width: 768px) {
+					height: 55px;
+				}
+				@media screen and (max-width: 767px) {
+					height: 34px;
+				}
+			}
+		}
+	}
+}

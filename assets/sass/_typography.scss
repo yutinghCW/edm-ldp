@@ -1,0 +1,70 @@
+$colors: () !default;
+$colors: map-merge((
+	"gray-100": ($gray-100),
+	"gray-200": ($gray-200),
+	"gray-300": ($gray-300),
+	"gray-400": ($gray-400),
+	"gray-500": ($gray-500),
+	"red-100": ($red-100),
+	"red-200": ($red-200),
+	"red-300": ($red-300),
+	"red-400": ($red-400),
+	"red-500": ($red-500),
+	"surface": ($surface),
+	"white": ($white),
+	"gray": ($gray),
+	"black": ($black),
+	"primary": ($primary),
+	"primary-variant": ($primary-variant),
+	"secondary": ($secondary),
+	"secondary-variant": ($secondary-variant),
+	"transformers": ($transformers),
+	"transformers-variant": ($transformers-variant),
+	"fashion": ($fashion),
+	"fashion-variant": ($fashion-variant),
+	"facebook": ($facebook),
+	"instagram": ($instagram),
+	"line": ($line),
+	"rss": ($rss)
+), $colors);
+
+$typo: $h1, $h2, $h3, $h4, $h5;
+$typo-m: $h1-m, $h2-m, $h3-m, $h4-m, $h5-m;
+$weight: 100, 300, 400, 500, 600;
+
+%my-1em {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+%font-weight-bold {
+    font-weight: 600;
+    @include breakpoint(768px) {
+        font-weight: 500;
+    }
+}
+
+@for $i from 1 through length($typo) {
+	h#{$i}, .h#{$i} {
+		font-size: #{nth($typo-m, $i)};
+		@include breakpoint(768px) {
+			font-size: #{nth($typo, $i)};
+		}
+	}
+	h#{$i} {
+		@extend %my-1em;
+		@extend %font-weight-bold;
+	}
+}
+@for $i from 1 through length($weight) {
+	.font-weight-#{nth($weight, $i)} {
+		font-weight: #{nth($weight, $i)};
+	}
+}
+@each $color, $value in $colors {
+	.color-#{$color} {
+		color: $value;
+	}
+	.bg-#{$color} {
+		background-color: $value;
+	}
+}

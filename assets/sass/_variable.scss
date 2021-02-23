@@ -1,0 +1,54 @@
+$container: 1170px;
+
+//
+$h1: 2.5rem;
+$h2: 1.375rem;
+$h3: 1.125rem;
+$h4: 1rem;
+$h5: 0.875rem;
+//
+$h1-m: 1.75rem;
+$h2-m: 1.25rem;
+$h3-m: 1.125rem;
+$h4-m: 1rem;
+$h5-m: 0.875rem;
+
+//
+$gray-100: #EEEEEE !default;
+$gray-200: #D3D5D7 !default;
+$gray-300: #939EA7 !default; //secondary
+$gray-400: #6B7780 !default;
+$gray-500: #48545D !default; //secondary-variant
+
+//
+$red-100: #FEEBEC !default;
+$red-200: #EE969B !default;
+$red-300: #D60C18 !default; //primary
+$red-400: #BE0B15 !default;
+$red-500: #9D0505 !default; //primary-variant
+
+//
+$white: #fff !default;
+$gray: #fafafa !default;
+$dark: #394148 !default;
+$black: #171717 !default;
+
+//
+$surface: #003a9f !default;
+$primary: $red-300 !default;
+$primary-variant: $red-500 !default;
+$secondary: $gray-300 !default;
+$secondary-variant: $gray-500 !default;
+
+//
+$transformers: #D7B788 !default;
+$transformers-variant: #895A36 !default;
+$fashion: #D1B158 !default;
+$fashion-variant: darken($fashion, 5%) !default;
+
+//
+$facebook: #1877F2 !default;
+$instagram: #E4405F !default;
+$line: #00C200 !default;
+$rss: #FF5700 !default;
+$mail: $surface !default;
