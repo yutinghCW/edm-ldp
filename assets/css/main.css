@@ -5314,6 +5314,9 @@ header a.logo img {
 .logo__set > a:first-child {
   margin-right: 10px;
 }
+.logo__set > a:first-child > img {
+  height: 40px;
+}
 @media screen and (min-width: 768px) {
   .logo__set.logo__set--transformers > a:first-child > img {
     width: 130px;

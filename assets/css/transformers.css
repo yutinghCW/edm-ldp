@@ -52,6 +52,13 @@ section.content {
     background-color: #fff;
   }
 }
+@media screen and (max-width: 1023px) {
+  section.content .display-flex {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 .feature-group .feature-item {
   background-color: #D7B788;
@@ -79,28 +86,6 @@ form button:hover {
   background-color: #895A36;
 }
 form .form__group .form__group__input:focus {
-  border-color: #895A36;
-}
-form .select__group.select__group--outlined select {
-  background-color: #fff;
-  background-image: url(../images/common/down.svg);
-  border-color: #939EA7;
-}
-form .select__group.select__group--outlined select:hover {
-  color: #895A36;
-  background-image: url(../images/common/down--transformers.svg);
-}
-form .label--check span.label__radio__mark::before {
-  background: rgba(215, 183, 136, 0.25);
-}
-form .label--check input:checked ~ span.label__radio__mark {
-  border-color: #895A36;
-  background-color: #895A36;
-}
-form .label--check:hover input ~ span.label__radio__mark {
-  border-color: #D7B788;
-}
-form .label--check:hover input:checked ~ span.label__radio__mark {
   border-color: #895A36;
 }
 

@@ -11,6 +11,9 @@
 		}
 		&:first-child {
 			margin-right: 10px;
+			> img {
+				height: 40px;
+			}
 		}
 	}
 	&.logo__set--transformers {

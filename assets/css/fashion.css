@@ -47,6 +47,13 @@ section.content {
     background-color: #fff;
   }
 }
+@media screen and (max-width: 1023px) {
+  section.content .display-flex {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 .slider-fade {
   position: absolute;
@@ -104,28 +111,6 @@ form button:hover {
   background-color: #D1B158;
 }
 form .form__group .form__group__input:focus {
-  border-color: #cba844;
-}
-form .select__group.select__group--outlined select {
-  background-color: #fff;
-  background-image: url(../images/common/down.svg);
-  border-color: #939EA7;
-}
-form .select__group.select__group--outlined select:hover {
-  color: #cba844;
-  background-image: url(../images/common/down--fashion.svg);
-}
-form .label--check span.label__radio__mark::before {
-  background: rgba(209, 177, 88, 0.25);
-}
-form .label--check input:checked ~ span.label__radio__mark {
-  border-color: #cba844;
-  background-color: #cba844;
-}
-form .label--check:hover input ~ span.label__radio__mark {
-  border-color: #D1B158;
-}
-form .label--check:hover input:checked ~ span.label__radio__mark {
   border-color: #cba844;
 }
 

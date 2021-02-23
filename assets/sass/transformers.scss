@@ -51,6 +51,13 @@ section {
                 background-color: $white;
             }
         }
+        .display-flex {
+            @media screen and (max-width: 1023px) {
+                flex-wrap: wrap;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
     }
 }
 
@@ -89,34 +96,4 @@ form {
             }
         }
     }
-    .select__group {
-        &.select__group--outlined {
-            select {
-                background-color: $white;
-                background-image: url(../images/common/down.svg);
-                border-color: $secondary;
-                &:hover {
-                    color: $transformers-variant;
-                    background-image: url(../images/common/down--transformers.svg);
-                }
-            }
-        }
-    }
-    .label--check {
-        span.label__radio__mark::before {
-            background: rgba($transformers, 0.25);
-        }
-        input:checked ~ span.label__radio__mark {
-            border-color: $transformers-variant;
-            background-color: $transformers-variant;
-        }
-        &:hover {
-            input ~ span.label__radio__mark {
-                border-color: $transformers;
-            }
-            input:checked ~ span.label__radio__mark {
-                border-color: $transformers-variant;
-            }
-        }
-    }    
 }
