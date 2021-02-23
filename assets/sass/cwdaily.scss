@@ -1,0 +1,99 @@
+@import "_mixin";
+@import "_variable";
+
+body {
+    background-color: $gray-100;
+}
+
+section {
+    &.opening {
+        position: relative;
+        height: 85vh;
+        background-image: url('../images/cwdaily/opening.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        @include background-size(cover);
+        &::before {
+            @include beforeafter('', block);
+            position: absolute;
+            top: 0;
+            left: 0;
+            // width: 100%;
+            // height: 100%;
+            // background-image: url('../images/primary/dot.png');
+        }
+        > .container {
+            position: relative;
+            height: 100%;
+            z-index: 1;
+            > .row {
+                height: 100%;
+                padding-top: 100px;
+                padding-bottom: 200px;
+                align-items: center;
+                h1, h2 {
+                    // background-color: rgba($white, 0.85);
+                    text-shadow: 0 0 0.5em $white, 0 0 0.5em $white, 0 0 0.5em $white;
+                    &::before {
+                        @include beforeafter('', block);
+                        height: 0.075em;
+                    }
+                }
+            }
+        }
+    }
+    &.content {
+        position: relative;
+        margin-top: -100px;
+        z-index: 1;
+        .container {
+            @media screen and (min-width: 1200px) {
+                background-color: $white;
+            }
+        }
+        .display-flex {
+            @media screen and (max-width: 1023px) {
+                flex-wrap: wrap;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+}
+
+.feature-group {
+    .feature-item {
+        background-color: $gray-100;
+        img {
+            width: 50%;
+        }
+    }
+}
+
+form {
+    label,
+    input[type*='text'],
+    input[type*='email'],
+    input[type*='tel'],
+    select {
+        display: block;
+        width: 100%;
+        font-size: 1rem;
+    }
+    button {
+        padding: 13px 50px;
+        color: $white;
+        font-size: 1rem;
+        background-color: $surface;
+        &:hover {
+            background-color: $primary-variant;
+        }
+    }
+    .form__group {
+        .form__group__input {
+            &:focus {
+                border-color: $primary-variant;
+            }
+        }
+    }
+}
