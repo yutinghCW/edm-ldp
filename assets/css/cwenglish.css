@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Open+Sans:wght@300;400;600&display=swap");
 body {
   background-color: #EEEEEE;
 }
@@ -31,7 +32,8 @@ section.opening > .container > .row {
   align-items: center;
 }
 section.opening > .container > .row h1, section.opening > .container > .row h2 {
-  text-shadow: 0 0 1em #171717;
+  font-family: 'Lora', sans;
+  text-shadow: 0 0 1em rgba(23, 23, 23, 0.5);
 }
 section.opening > .container > .row h2 {
   padding-left: 0.4em;

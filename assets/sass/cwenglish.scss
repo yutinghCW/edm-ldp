@@ -1,5 +1,6 @@
 @import "_mixin";
 @import "_variable";
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Open+Sans:wght@300;400;600&display=swap');
 
 body {
     background-color: $gray-100;
@@ -30,9 +31,8 @@ section {
                 padding-bottom: 200px;
                 align-items: center;
                 h1, h2 {
-                    // background-color: rgba($black, 0.85);
-                    // text-shadow: 0 0 0.5em rgba($black, 0.5);
-                    text-shadow: 0 0 1em $black;
+                    font-family: 'Lora', sans;
+                    text-shadow: 0 0 1em rgba($black, 0.5);
                 }
                 h2 {
                     padding-left: 0.4em;
