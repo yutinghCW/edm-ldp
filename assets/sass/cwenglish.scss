@@ -112,7 +112,7 @@ form {
     .form__group {
         .form__group__input {
             &:focus {
-                border-color: $primary-variant;
+                border-color: $surface;
             }
         }
     }
