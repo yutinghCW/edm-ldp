@@ -9,7 +9,7 @@ section {
     &.opening {
         position: relative;
         height: 85vh;
-        background-image: url('http://placehold.jp/D3D5D7/939EA7/1200x800.png');
+        background-image: url('../images/cwedm/opening.jpg');
         background-repeat: no-repeat;
         background-position: center;
         @include background-size(cover);
