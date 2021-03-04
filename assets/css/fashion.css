@@ -91,26 +91,26 @@ section.content {
   width: 50%;
 }
 
-form label,
-form input[type*='text'],
-form input[type*='email'],
-form input[type*='tel'],
-form select {
+.form label,
+.form input[type*='text'],
+.form input[type*='email'],
+.form input[type*='tel'],
+.form select {
   display: block;
   width: 100%;
   font-size: 1rem;
 }
-form button {
+.form button {
   padding: 10px 50px;
   color: #171717;
   font-size: 1rem;
   background-color: #fff;
   border: 1px solid #D1B158;
 }
-form button:hover {
+.form button:hover {
   background-color: #D1B158;
 }
-form .form__group .form__group__input:focus {
+.form .form__group .form__group__input:focus {
   border-color: #cba844;
 }
 

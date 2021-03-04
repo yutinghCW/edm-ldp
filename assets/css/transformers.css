@@ -67,25 +67,25 @@ section.content {
   width: 50%;
 }
 
-form label,
-form input[type*='text'],
-form input[type*='email'],
-form input[type*='tel'],
-form select {
+.form label,
+.form input[type*='text'],
+.form input[type*='email'],
+.form input[type*='tel'],
+.form select {
   display: block;
   width: 100%;
   font-size: 1rem;
 }
-form button {
+.form button {
   padding: 10px 50px;
   color: #fff;
   font-size: 1rem;
   background-color: #D7B788;
 }
-form button:hover {
+.form button:hover {
   background-color: #895A36;
 }
-form .form__group .form__group__input:focus {
+.form .form__group .form__group__input:focus {
   border-color: #895A36;
 }
 

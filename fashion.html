@@ -122,7 +122,7 @@
 							</div>
 						</div>
 						<div class="col-12 mt-md-60 mt-40">
-							<form class="form" action="#!" method="post">
+							<div class="form">
 								<p class="h2 mt-0 mb-40 serif color-fashion-variant text-center">邀您一同與我們，攜手找出迎向新經濟的解方。</p>
 								<div class="row">
 									<div class="col-md-8 col-12 mb-20">
@@ -134,7 +134,7 @@
 										</div>
 									</div>
 								</div>
-							</form>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -155,8 +155,68 @@
 			</div>
 		</div>
 	</footer>
+	<div id="success" class="message message--dialogs" style="display: none;">
+		<div class="message__container">
+			<i class="icon icon-cancel message__close"></i>
+			<div class="message__txt">
+				<h2>感謝您的訂閱！</h2>
+				<p>請查看您的信箱，我們將寄送一封驗證信給您，以確保未來信件會確實送到您的信箱。</p>
+			</div>
+			<div class="message__btn">
+				<button class="btn btn--contained btn__close">我知道了</button>
+			</div>
+		</div>
+	</div>
+	<div id="error" class="message message--dialogs" style="display: none;">
+		<div class="message__container">
+			<i class="icon icon-cancel message__close"></i>
+			<div class="message__txt">
+				<h2>訂閱失敗</h2>
+				<p>網路繁忙，請稍後再試</p>
+			</div>
+			<div class="message__btn">
+				<button href="#!" class="btn btn--contained btn__close">我知道了</button>
+			</div>
+		</div>
+	</div>
+	<div class="loader" style="display: none;">
+		<div class="loader__animate loader__animate--triggle">
+			<div class="loader__icon"></div>
+		</div>
+	</div>
+	<div class="black"></div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script>
+		$(function () {
+			$(".form button").click(function() {
+				var mail = $('#email').val();
+				$.post("https://www.cw.com.tw/api/newsletter/outer/subscribe", {
+					email: mail,
+					code: 'EPAPER26',
+					function(d) {
+						$('.loader').fadeIn();
+						setTimeout(() => {
+							$('.loader').hide();
+							$('#error').show();
+							$('.black').addClass('opened');
+						}, 5000);
+					}
+				}, function(data, status) {
+					// alert("Data: " + data + "\nStatus: " + status);
+					if (status == 'success') {
+						$('.loader, #error').hide();
+						$('#success').show();
+						$('.black').addClass('opened');
+					} else {
+						$('.loader').hide();
+						$('#error').show();
+						$('.black').addClass('opened');
+					}
+				});
+			});
+		})
+	</script>
 </body>
 </html>

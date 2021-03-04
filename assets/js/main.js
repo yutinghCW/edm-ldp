@@ -24,7 +24,17 @@ $(function () {
 		autoplay: true,
 		autoplaySpeed: 5000,
 		cssEase: 'linear'
-	});	  
+	});
+	$(".message__close").on("click", function() {
+		$(this).parent().parent().fadeOut();
+		$('.black').removeClass('opened');
+		$('body').removeClass('message__open');
+	});
+	$(".btn__close").on("click", function() {
+		$(this).parent().parent().parent().fadeOut();
+		$('.black').removeClass('opened');
+		$('body').removeClass('message__open');
+	});
 	$(window).resize(function () {});
 	$(window).scroll(function () {
 		var scroll = $(this).scrollTop(),
