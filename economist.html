@@ -93,7 +93,7 @@
 									<div class="col-md-8 col-12 mb-20">
 										<div class="display-flex align-item-start">
 											<div class="form__group form__group--outlined col-md-9 col-12 pl-md-0 pl-20">
-												<input class="form__group__input" type="email" name="email" id="email" placeholder="請輸入電子郵件" />
+												<input class="form__group__input" type="email" name="email" id="email" data-paper="EPAPER7" placeholder="請輸入電子郵件" />
 												<i class="form__group__help form__group__help--highlight">　</i>
 											</div>
 											<button class="col-md-3 col-sm-3 col-5 px-md-0 mt-md-0 mt-10" type="submit">送出</button>
@@ -154,50 +154,5 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 	<script src="assets/js/main.js"></script>
-	<script>
-		$(function () {
-			$(".form button").click(function() {
-				var mail = $('#email').val();
-				function validateEmail(mail) {
-					const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-					return re.test(mail);
-				}
-				if ( validateEmail(mail) ) {
-					$('#email').parent().removeClass('form__group--error').addClass('form__group--correct');
-				} else if ( mail == '' ) {
-					$('.form__group__help').text('請輸入電子郵件');
-					$('#email').parent().removeClass('form__group--correct').addClass('form__group--error');
-					return false;
-				} else {
-					$('.form__group__help').text('請輸入正確格式');
-					$('#email').parent().removeClass('form__group--correct').addClass('form__group--error');
-					return false;
-				}
-				$.post("https://www.cw.com.tw/api/newsletter/outer/subscribe", {
-					email: mail,
-					code: 'EPAPER7',
-					function(d) {
-						$('.loader').fadeIn();
-						setTimeout(() => {
-							$('.loader').hide();
-							$('#error').show();
-							$('.black').addClass('opened');
-						}, 5000);
-					}
-				}, function(data, status) {
-					// alert("Data: " + data + "\nStatus: " + status);
-					if (status == 'success') {
-						$('.loader, #error').hide();
-						$('#success').show();
-						$('.black').addClass('opened');
-					} else {
-						$('.loader').hide();
-						$('#error').show();
-						$('.black').addClass('opened');
-					}
-				});
-			});
-		})
-	</script>
 </body>
 </html>
