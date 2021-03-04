@@ -4817,6 +4817,9 @@ input[type*='number']::-webkit-outer-spin-button {
 .form__group--correct .icon {
   color: #003a9f;
 }
+.form__group--correct .form__group__help {
+  display: none;
+}
 .form__group--correct .form__group__input {
   border-color: #003a9f;
 }
@@ -4866,7 +4869,6 @@ input[type*='number']::-webkit-outer-spin-button {
   border-color: #939EA7;
 }
 .form__group__help {
-  display: block;
   padding-left: 1rem;
   padding-right: 1rem;
   margin-top: 5px;
@@ -5367,6 +5369,9 @@ footer a {
   to {
     right: 25px;
   }
+}
+.align-item-start {
+  align-items: flex-start;
 }
 
 /*# sourceMappingURL=main.css.map */

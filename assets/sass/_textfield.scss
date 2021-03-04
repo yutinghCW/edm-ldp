@@ -184,6 +184,9 @@ input[type*='number']::-webkit-outer-spin-button {
         .icon {
             color: $surface;
         }
+        .form__group__help {
+            display: none;
+        }
         .form__group__input {
             border-color: $surface;
         }
@@ -244,7 +247,6 @@ input[type*='number']::-webkit-outer-spin-button {
         }
     }
     &__help {
-        display: block;
         padding-left: 1rem;
         padding-right: 1rem;
         margin-top: 5px;
