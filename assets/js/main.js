@@ -35,10 +35,11 @@ $(function () {
 		$('.black').removeClass('opened');
 		$('body').removeClass('message__open');
 	});
-	$(".form button").click(function() {
+	$("form").on('submit', function(event) {
 		var mail = $('#email').val(),
 			paper = $('#email').attr('data-paper');
 		// console.log(paper);
+		event.preventDefault();
 		function validateEmail(mail) {
 			const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 			return re.test(mail);
@@ -59,15 +60,15 @@ $(function () {
 			code: paper,
 			function(d) {
 				$('.loader').fadeIn();
-				setTimeout(() => {
-					$('.loader').hide();
-					$('#error').show();
-					$('.black').addClass('opened');
-				}, 5000);
+				// setTimeout(() => {
+				// 	$('.loader').hide();
+				// 	$('#error').show();
+				// 	$('.black').addClass('opened');
+				// }, 5000);
 			}
 		}, function(data, status) {
 			// alert("Data: " + data + "\nStatus: " + status);
-			if (status == 'success') {
+			if ( data['code'] == '0000' ) {
 				$('.loader, #error').hide();
 				$('#success').show();
 				$('.black').addClass('opened');
