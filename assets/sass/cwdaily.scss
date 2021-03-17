@@ -13,6 +13,9 @@ section {
         background-repeat: no-repeat;
         background-position: center;
         @include background-size(cover);
+        @media screen and (orientation: portrait) {
+            background-position: 65% center;
+        }
         &::before {
             @include beforeafter('', block);
             position: absolute;
@@ -33,7 +36,7 @@ section {
                 align-items: center;
                 h1, h2 {
                     // background-color: rgba($white, 0.85);
-                    text-shadow: 0 0 0.5em $white, 0 0 0.5em $white, 0 0 0.5em $white;
+                    text-shadow: 0 0 0.5em #ffeedc, 0 0 0.5em #ffeedc, 0 0 0.5em #ffeedc;
                     &::before {
                         @include beforeafter('', block);
                         height: 0.075em;

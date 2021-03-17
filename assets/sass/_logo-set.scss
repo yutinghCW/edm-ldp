@@ -12,6 +12,7 @@
 		&:first-child {
 			margin-right: 10px;
 			> img {
+				width: auto;
 				height: 40px;
 			}
 		}
@@ -21,16 +22,20 @@
 			&:first-child >img {
 				@media screen and (min-width: 768px) {
 					width: 130px;
+					height: auto;
 				}
 				@media screen and (max-width: 767px) {
+					width: auto;
 					height: 30px;
 				}
 			}
 			&:last-child >img {
 				@media screen and (min-width: 768px) {
 					width: 125px;
+					height: auto;
 				}
 				@media screen and (max-width: 767px) {
+					width: auto;
 					height: 25px;
 				}
 			}
@@ -40,9 +45,11 @@
 		>a {
 			>img {
 				@media screen and (min-width: 768px) {
+					width: auto;
 					height: 55px;
 				}
 				@media screen and (max-width: 767px) {
+					width: auto;
 					height: 34px;
 				}
 			}

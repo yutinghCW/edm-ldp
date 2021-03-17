@@ -5038,35 +5038,42 @@ header a.logo img {
   margin-right: 10px;
 }
 .logo__set > a:first-child > img {
+  width: auto;
   height: 40px;
 }
 @media screen and (min-width: 768px) {
   .logo__set.logo__set--transformers > a:first-child > img {
     width: 130px;
+    height: auto;
   }
 }
 @media screen and (max-width: 767px) {
   .logo__set.logo__set--transformers > a:first-child > img {
+    width: auto;
     height: 30px;
   }
 }
 @media screen and (min-width: 768px) {
   .logo__set.logo__set--transformers > a:last-child > img {
     width: 125px;
+    height: auto;
   }
 }
 @media screen and (max-width: 767px) {
   .logo__set.logo__set--transformers > a:last-child > img {
+    width: auto;
     height: 25px;
   }
 }
 @media screen and (min-width: 768px) {
   .logo__set.logo__set--fashion > a > img {
+    width: auto;
     height: 55px;
   }
 }
 @media screen and (max-width: 767px) {
   .logo__set.logo__set--fashion > a > img {
+    width: auto;
     height: 34px;
   }
 }

@@ -9,6 +9,10 @@ section {
     &.opening {
         position: relative;
         height: 85vh;
+        background-image: url('../images/fashion/opening-2.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        @include background-size(cover);
         &::before {
             @include beforeafter('', block);
             position: absolute;
@@ -60,27 +64,6 @@ section {
     }
 }
 
-.slider-fade {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    .slick-list, .slick-track {
-        height: 100%;
-    }
-    .slick-slide {
-        img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
-}
-
 .feature-group {
     .feature-item {
         position: relative;
@@ -108,7 +91,7 @@ form {
         font-size: 1rem;
     }
     button {
-        padding: 10px 50px;
+        padding: 12px 50px;
         color: $black;
         font-size: 1rem;
         background-color: $white;

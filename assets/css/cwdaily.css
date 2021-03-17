@@ -13,6 +13,11 @@ section.opening {
   -webkit-background-size: cover;
   background-size: cover;
 }
+@media screen and (orientation: portrait) {
+  section.opening {
+    background-position: 65% center;
+  }
+}
 section.opening::before {
   content: "";
   display: block;
@@ -32,7 +37,7 @@ section.opening > .container > .row {
   align-items: center;
 }
 section.opening > .container > .row h1, section.opening > .container > .row h2 {
-  text-shadow: 0 0 0.5em #fff, 0 0 0.5em #fff, 0 0 0.5em #fff;
+  text-shadow: 0 0 0.5em #ffeedc, 0 0 0.5em #ffeedc, 0 0 0.5em #ffeedc;
 }
 section.opening > .container > .row h1::before, section.opening > .container > .row h2::before {
   content: "";
