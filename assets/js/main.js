@@ -15,16 +15,6 @@ $(function () {
 			}
 		}
 	});
-	$('.slider-fade').slick({
-		dots: false,
-		arrows: false,
-		infinite: true,
-		speed: 500,
-		fade: true,
-		autoplay: true,
-		autoplaySpeed: 5000,
-		cssEase: 'linear'
-	});
 	$(".message__close").on("click", function() {
 		$(this).parent().parent().fadeOut();
 		$('.black').removeClass('opened');
