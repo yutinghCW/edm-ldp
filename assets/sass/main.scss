@@ -25,3 +25,37 @@
 .align-item-start {
     align-items: flex-start;
 }
+
+.scroll-bottom {
+    position: absolute;
+    bottom: 150px;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    padding: 15px 20px 0;
+    font-weight: 500;
+    color: $black;
+    background-color: #fc0;
+    @include border-radius(50%);
+    @include translateX(-50%);
+    @include animation(scroll 1s infinite alternate ease-in);
+    &:hover {
+        background-color: #fb0;
+    }
+    span {
+        display: block;
+        padding: 3px;
+        font-size: 0.875rem;
+        font-weight: normal;
+        @include rotate(90deg);
+    }
+}
+
+@include keyframes(scroll) {
+    0% {
+        bottom: 150px;
+    }
+    100% {
+        bottom: 120px;
+    }
+}

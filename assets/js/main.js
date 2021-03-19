@@ -71,10 +71,9 @@ $(function () {
 	});
 	$(window).resize(function () {});
 	$(window).scroll(function () {
-		var scroll = $(this).scrollTop(),
-			openingHeight = $(".opening").outerHeight();
-		if (scroll >= openingHeight / 2) {
+		var scroll = $(this).scrollTop();
+		if (scroll >= height) {
 		} else {
-		}
+		}	
 	});
 });

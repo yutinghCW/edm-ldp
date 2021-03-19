@@ -97,3 +97,11 @@ form {
         }
     }
 }
+
+.scroll-bottom {
+    background-color: $transformers;
+    &:hover {
+        color: $white;
+        background-color: $transformers-variant;
+    }
+}

@@ -5382,4 +5382,64 @@ footer a {
   align-items: flex-start;
 }
 
+.scroll-bottom {
+  position: absolute;
+  bottom: 150px;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  padding: 15px 20px 0;
+  font-weight: 500;
+  color: #171717;
+  background-color: #fc0;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -moz-animation: scroll 1s infinite alternate ease-in;
+  -webkit-animation: scroll 1s infinite alternate ease-in;
+  animation: scroll 1s infinite alternate ease-in;
+}
+.scroll-bottom:hover {
+  background-color: #fb0;
+}
+.scroll-bottom span {
+  display: block;
+  padding: 3px;
+  font-size: 0.875rem;
+  font-weight: normal;
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+@-moz-keyframes scroll {
+  0% {
+    bottom: 150px;
+  }
+  100% {
+    bottom: 120px;
+  }
+}
+@-webkit-keyframes scroll {
+  0% {
+    bottom: 150px;
+  }
+  100% {
+    bottom: 120px;
+  }
+}
+@keyframes scroll {
+  0% {
+    bottom: 150px;
+  }
+  100% {
+    bottom: 120px;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */

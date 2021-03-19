@@ -102,4 +102,12 @@ form .form__group .form__group__input:focus {
   border-color: #cba844;
 }
 
+.scroll-bottom {
+  color: #171717;
+  background-color: #D1B158;
+}
+.scroll-bottom:hover {
+  background-color: #cba844;
+}
+
 /*# sourceMappingURL=fashion.css.map */

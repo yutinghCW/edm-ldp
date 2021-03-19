@@ -89,4 +89,12 @@ form .form__group .form__group__input:focus {
   border-color: #895A36;
 }
 
+.scroll-bottom {
+  background-color: #D7B788;
+}
+.scroll-bottom:hover {
+  color: #fff;
+  background-color: #895A36;
+}
+
 /*# sourceMappingURL=transformers.css.map */

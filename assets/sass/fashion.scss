@@ -108,3 +108,11 @@ form {
         }
     }
 }
+
+.scroll-bottom {
+    color: $black;
+    background-color: $fashion;
+    &:hover {
+        background-color: darken($fashion, 5%);
+    }
+}
