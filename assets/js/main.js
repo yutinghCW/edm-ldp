@@ -37,7 +37,7 @@ $(function () {
 		if ( validateEmail(mail) ) {
 			$('#email').parent().removeClass('form__group--error').addClass('form__group--correct');
 		} else if ( mail == '' ) {
-			$('.form__group__help').text('請輸入電子郵件');
+			$('.form__group__help').text('請輸入 e-mail');
 			$('#email').parent().removeClass('form__group--correct').addClass('form__group--error');
 			return false;
 		} else {
