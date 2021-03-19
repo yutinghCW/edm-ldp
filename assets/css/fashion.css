@@ -104,10 +104,14 @@ form .form__group .form__group__input:focus {
 
 .scroll-bottom {
   color: #171717;
+  font-weight: 600;
   background-color: #D1B158;
 }
 .scroll-bottom:hover {
   background-color: #cba844;
+}
+.scroll-bottom span {
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=fashion.css.map */

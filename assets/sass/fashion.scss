@@ -111,8 +111,12 @@ form {
 
 .scroll-bottom {
     color: $black;
+    font-weight: 600;
     background-color: $fashion;
     &:hover {
         background-color: darken($fashion, 5%);
+    }
+    span {
+        font-weight: bold;
     }
 }
