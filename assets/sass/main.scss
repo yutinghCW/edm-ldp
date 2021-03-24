@@ -59,3 +59,29 @@
         bottom: 120px;
     }
 }
+
+body.printscreen {
+    .logo__set {
+        display: inline-flex;
+        transform-origin: top left;
+        @include scale(1.125);
+    }
+    section.opening {
+        height: 100vh;
+        > .container > .row {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+    }
+    section.content,
+    .smooth-scroll,
+    footer {
+        display: none;
+    }
+    h1 {
+        font-size: $h1 * 1.5;
+    }
+    h2 {
+        font-size: $h2 * 1.5;
+    }
+}

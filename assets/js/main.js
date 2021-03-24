@@ -76,4 +76,7 @@ $(function () {
 		} else {
 		}	
 	});
+	if ( window.location.href.indexOf('print') > 0 ) {
+		$('body').addClass('printscreen');
+	}
 });

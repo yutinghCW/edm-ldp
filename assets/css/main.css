@@ -5441,5 +5441,31 @@ footer a {
     bottom: 120px;
   }
 }
+body.printscreen .logo__set {
+  display: inline-flex;
+  transform-origin: top left;
+  -moz-transform: scale(1.125, 1.125);
+  -ms-transform: scale(1.125, 1.125);
+  -webkit-transform: scale(1.125, 1.125);
+  transform: scale(1.125, 1.125);
+}
+body.printscreen section.opening {
+  height: 100vh;
+}
+body.printscreen section.opening > .container > .row {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+body.printscreen section.content,
+body.printscreen .smooth-scroll,
+body.printscreen footer {
+  display: none;
+}
+body.printscreen h1 {
+  font-size: 3.75rem;
+}
+body.printscreen h2 {
+  font-size: 2.0625rem;
+}
 
 /*# sourceMappingURL=main.css.map */
