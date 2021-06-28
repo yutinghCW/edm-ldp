@@ -8,6 +8,13 @@ body {
 section.opening {
   position: relative;
   height: 85vh;
+  background-image: url("../images/cwenglish/opening-2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
 }
 section.opening::before {
   content: "";
@@ -37,10 +44,6 @@ section.opening > .container > .row h1, section.opening > .container > .row h2 {
   font-family: 'Lora', sans;
   text-shadow: 0 0 1em rgba(23, 23, 23, 0.5);
 }
-section.opening > .container > .row h2 {
-  padding-left: 0.4em;
-  letter-spacing: 0.4em;
-}
 section.content {
   position: relative;
   margin-top: -100px;
@@ -57,6 +60,14 @@ section.content {
     flex-direction: column;
     align-items: center;
   }
+}
+
+.scroll-bottom {
+  width: 90px;
+  height: 90px;
+  padding: 25px 10px 0;
+  letter-spacing: -0.025em;
+  text-align: center;
 }
 
 .feature-group .feature-item {

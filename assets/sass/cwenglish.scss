@@ -11,6 +11,10 @@ section {
     &.opening {
         position: relative;
         height: 85vh;
+        background-image: url('../images/cwenglish/opening-2.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        @include background-size(cover);
         &::before {
             @include beforeafter('', block);
             position: absolute;
@@ -35,10 +39,6 @@ section {
                     font-family: 'Lora', sans;
                     text-shadow: 0 0 1em rgba($black, 0.5);
                 }
-                h2 {
-                    padding-left: 0.4em;
-                    letter-spacing: 0.4em;
-                }
             }
         }
     }
@@ -59,6 +59,14 @@ section {
             }
         }
     }
+}
+
+.scroll-bottom {
+    width: 90px;
+    height: 90px;
+    padding: 25px 10px 0;
+    letter-spacing: -0.025em;
+    text-align: center;
 }
 
 .feature-group {
